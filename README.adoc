@@ -1,0 +1,53 @@
+==== Build package
+
+[source, bash]
+----
+./mvnw package
+----
+
+==== Execute tests
+
+[source, bash]
+----
+./mvnw test
+----
+
+==== Execute default algorithm 'shortest'
+
+[source, bash]
+----
+
+java -jar target/route-calculator-0.0.1-SNAPSHOT.jar
+
+or
+
+java -Dcz.jcode.routecalculator.service.algorithm=shortest -jar target/route-calculator-0.0.1-SNAPSHOT.jar
+----
+
+==== Execute dumb algorithm 'first'
+
+[source, bash]
+----
+java -Dcz.jcode.routecalculator.service.algorithm=first -jar target/route-calculator-0.0.1-SNAPSHOT.jar
+----
+
+==== Execute JGraphT algorithm 'dijkstra'
+
+[source, bash]
+----
+java -Dcz.jcode.routecalculator.service.algorithm=dijkstra -jar target/route-calculator-0.0.1-SNAPSHOT.jar
+----
+
+==== Test URL set:
+----
+http://localhost:8080/routing/ESP/CZE
+http://localhost:8080/routing/NOR/ITA
+http://localhost:8080/routing/PRT/IND
+----
+
+==== Failed Test URL set:
+----
+http://localhost:8080/routing/ESP/JPN
+http://localhost:8080/routing/NOR/USA
+http://localhost:8080/routing/PRT/WTF
+----

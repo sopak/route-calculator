@@ -1,0 +1,8 @@
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+### IntelliJ IDEA ###
+.idea
+*.iml
+### NetBeans ###
